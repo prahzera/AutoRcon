@@ -1,14 +1,14 @@
 {
     "servidores": [
         {
-            "ip": "190.104.149.65",
-            "puerto": 9101,
-            "password": "binich?"
+            "ip": "127.0.0.1",
+            "puerto": 1234,
+            "password": "password"
         },
         {
-            "ip": "190.104.149.65",
-            "puerto": 9113,
-            "password": "binich?"
+            "ip": "127.0.0.1",
+            "puerto": 5678,
+            "password": "password"
         }
     ],
     "comandos": [
