@@ -15,7 +15,6 @@ const config = (() => {
     }
 })();
 
-// Función para obtener un timestamp formateado con la hora local del sistema
 function getTimestamp() {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
@@ -25,7 +24,6 @@ function getTimestamp() {
     return `${date} ${hours}:${minutes}:${seconds}`;
 }
 
-// Función para imprimir la marca de agua y la información adicional
 function imprimirInfo() {
     const info = `
     =====================================================
@@ -56,7 +54,6 @@ function imprimirResumenConfig() {
 
     console.log('Comandos cargados:\n' + tableComandos.toString());
 
-    // Imprimir resumen de servidores (incluyendo puerto)
     const tableServidores = new Table({
         head: ['#', 'IP', 'Puerto'],
         colWidths: [5, 20, 10],
@@ -102,7 +99,6 @@ async function ejecutarComando(servidor, comando) {
     }
 }
 
-// Convertir tiempo a milisegundos
 function tiempoAMilisegundos(tiempo, valor) {
     switch (tiempo) {
         case 'h': return valor * 60 * 60 * 1000;  // Horas a milisegundos
@@ -113,7 +109,6 @@ function tiempoAMilisegundos(tiempo, valor) {
 }
 
 
-// Inicializar intervalos para comandos
 function iniciarComandos() {
     // Ejecutar comandos al inicio
     config.comandos.forEach((comando) => {
@@ -122,7 +117,6 @@ function iniciarComandos() {
         });
     });
 
-    // Luego, ejecutar cada comando en intervalos configurados
     config.comandos.forEach((comando) => {
         const intervalo = tiempoAMilisegundos(comando.tiempo, comando.valor);
         setInterval(() => {
@@ -133,6 +127,5 @@ function iniciarComandos() {
     });
 }
 
-// Iniciar la ejecución
-imprimirInfo();  // Imprimir la marca de agua e información adicional
-iniciarComandos();  // Ejecutar comandos inmediatamente y luego en intervalos
+imprimirInfo();
+iniciarComandos();
