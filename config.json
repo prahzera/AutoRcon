@@ -1,0 +1,31 @@
+{
+    "servidores": [
+        {
+            "ip": "190.104.149.65",
+            "puerto": 9101,
+            "password": "binich?"
+        },
+        {
+            "ip": "190.104.149.65",
+            "puerto": 9113,
+            "password": "binich?"
+        }
+    ],
+    "comandos": [
+        {
+            "comando": "listplayers",
+            "tiempo": "h",
+            "valor": "12"
+        },
+        {
+            "comando": "listplayers",
+            "tiempo": "m",
+            "valor": "15"
+        },
+        {
+            "comando": "listplayers",
+            "tiempo": "s",
+            "valor": "60"
+        }
+    ]
+}

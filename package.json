@@ -1,0 +1,22 @@
+{
+  "name": "autorcon",
+  "version": "1.0.7",
+  "main": "app.js",
+  "bin": "app.js",
+  "scripts": {
+    "build": "pkg . --targets node16-win-x64 --output AutoRcon.exe"
+  },
+  "keywords": [],
+  "author": "Prahzera",
+  "license": "ISC",
+  "description": "Un software CLI para automatizar el envio de comandos RCON a cualquier juego o juegos.",
+  "dependencies": {
+    "cli-table3": "^0.6.5",
+    "colors": "^1.4.0",
+    "moment-timezone": "^0.5.46",
+    "rcon-client": "^4.2.5"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
